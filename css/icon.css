@@ -1,15 +1,13 @@
-#page h1.page-title, #post>#post-info {
-text-align: center;
-}
 @font-face {
   font-family: "iconfont"; /* Project id 2750166 */
-  src: url('//at.alicdn.com/t/font_2750166_m7zydvptap9.woff2?t=1629181710890') format('woff2'),
-       url('//at.alicdn.com/t/font_2750166_m7zydvptap9.woff?t=1629181710890') format('woff'),
-       url('//at.alicdn.com/t/font_2750166_m7zydvptap9.ttf?t=1629181710890') format('truetype');
+  src: url('//at.alicdn.com/t/font_2750166_ree64kff32d.woff2?t=1629206506086') format('woff2'),
+       url('//at.alicdn.com/t/font_2750166_ree64kff32d.woff?t=1629206506086') format('woff'),
+       url('//at.alicdn.com/t/font_2750166_ree64kff32d.ttf?t=1629206506086') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
+  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
