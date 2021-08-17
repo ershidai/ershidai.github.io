@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>ranger的使用</title>
+      <link href="/article/ce6bd9d5.html"/>
+      <url>/article/ce6bd9d5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="ranger的使用"><a href="#ranger的使用" class="headerlink" title="ranger的使用"></a>ranger的使用</h1><p>一个基于python语言，vim的操作方式的linux终端程序</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul><li><p>在arch中安装</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> pacman -S --noconfirm ranger可能需要的依赖suo pacman -S --noconfirm libcaca hightlight atool <span class="token function">lynx</span> w3m elinks mediainfo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ranger --copy-config-all <span class="token comment">#生成默认配置文件</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><p>commands.py ：与以下命令一起启动的命令</p></li><li><p>commands_full.py: 全套命令</p></li><li><p>rc.conf: 主要配置和绑定</p></li><li><p>rifile.conf: 文件关联</p></li><li><p>scopen.sh: 各种文件预览</p><p>这里我们处理rc.conf</p><h3 id="图片预览"><a href="#图片预览" class="headerlink" title="图片预览"></a>图片预览</h3><p>修改rc.conf</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">set</span> preview_images <span class="token boolean">false</span> <span class="token comment">#改成true</span><span class="token builtin class-name">set</span> preview_images_method w3m<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p>在环境变量<code>vim ~/.zshrc</code>增加下面一行</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">RANGER_LOAD_DEFAULT_RC</span><span class="token operator">=</span>FALSE<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="显示边框"><a href="#显示边框" class="headerlink" title="显示边框"></a>显示边框</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">set</span> draw_borders <span class="token boolean">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="显示行号"><a href="#显示行号" class="headerlink" title="显示行号"></a>显示行号</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">set</span> line_numbers relative<span class="token builtin class-name">set</span> one_indexde <span class="token boolean">true</span> <span class="token comment">#默认从0开始，这里改为1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="设置低预览"><a href="#设置低预览" class="headerlink" title="设置低预览"></a>设置低预览</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">set</span> preview_max_size <span class="token number">5120000</span> <span class="token comment">#预览5MB以下的文件</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="无预览时不折叠"><a href="#无预览时不折叠" class="headerlink" title="无预览时不折叠"></a>无预览时不折叠</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">set</span> collapse_preview <span class="token boolean">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul><h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><p>大部分与vim相同</p><table><thead><tr><th>快捷键</th><th>说明</th></tr></thead><tbody><tr><td>yy</td><td>复制</td></tr><tr><td>dd</td><td>剪切</td></tr><tr><td>pp</td><td>粘贴</td></tr><tr><td>cw</td><td>重命名</td></tr><tr><td>a</td><td>重命名</td></tr><tr><td>q</td><td>退出</td></tr><tr><td>Q</td><td>全部退出</td></tr><tr><td>v</td><td>全选</td></tr><tr><td>V</td><td>选择模式</td></tr></tbody></table><table><thead><tr><th>gh</th><th>cd ~</th></tr></thead><tbody><tr><td>ge</td><td>cd /etc</td></tr><tr><td>gu</td><td>cd /usr</td></tr><tr><td>gd</td><td>cd /dev</td></tr><tr><td>gl</td><td>cd -r .</td></tr><tr><td>gL</td><td>cd -r %f</td></tr><tr><td>go</td><td>cd /opt</td></tr><tr><td>gv</td><td>cd /var</td></tr><tr><td>gm</td><td>cd /media</td></tr></tbody></table><p>参考文章：<a href="https://blog.csdn.net/lxyoucan/article/details/115671189">终端中的文件管理器ranger【视频】_lxyoucan的博客-CSDN博客</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ranger </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python-method</title>
       <link href="/article/8382.html"/>
       <url>/article/8382.html</url>
