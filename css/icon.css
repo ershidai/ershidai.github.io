@@ -1,3 +1,61 @@
+/* 首页文章卡片 */
+#recent-posts > .recent-post-item{
+    background:rgba(255, 255, 255, 0.9);
+}
+/* 首页侧栏卡片 */
+.card-widget{
+  background:rgba(255, 255, 255, 0.9)
+}
+/* 文章页面正文背景 */
+div#post{
+  background: rgba(255, 255, 255, 0.9);
+}
+/* 分页页面 */
+div#page{
+  background: rgba(255, 255, 255, 0.9);
+}
+/* 归档页面 */
+div#archive{
+  background: rgba(255, 255, 255, 0.9);
+}
+/* 标签页面 */
+div#tag{
+  background: rgba(255, 255, 255, 0.9);
+}
+/* 分类页面 */
+div#category{
+  background: rgba(255, 255, 255, 0.9);
+}
+#footer{
+  opacity: 0.5;
+}
+
+/* 页脚透明 */
+#footer{
+  background: transparent!important;
+}
+/*页脚自定义字段字体颜色*/
+/* 也就是配置文件里的footer_custom_text */
+.footer_custom_text {
+    color: #1296db;
+}
+
+/* 版权链接去掉下划线 */
+
+.layout_post .post-copyright .post-copyright-info a {
+    text-decoration: none;
+}
+
+/* 博主昵称颜色 */
+.author-info__name {
+    color: #1296db;
+}
+
+/* 首页中间打字效果上方 */
+#page-header #site_title {
+    color: #80bdab;
+}
+
 @font-face {
   font-family: "iconfont"; /* Project id 2750166 */
   src: url('//at.alicdn.com/t/font_2750166_ree64kff32d.woff2?t=1629206506086') format('woff2'),
@@ -13,36 +71,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-gmail:before {
-  content: "\e6a5";
-  font-size: 22px;
-}
-
-.icon-github:before {
-  content: "\ea0b";
-  font-size: 22px;
-}
-
-.icon-weibo:before {
-  content: "\e63e";
-  font-size: 22px;
-  color:#d81e06
-}
-
-.icon-RSS:before {
-  content: "\e78a";
-  font-size: 22px;
-  color:#13227a
-}
-
 .icon-zhihu:before {
   content: "\e602";
-  font-size: 22px;
-  color:#1296db
-}
-
-.icon-telegram:before {
-  content: "\e731";
   font-size: 22px;
   color:#1296db
 }
@@ -51,17 +81,5 @@
   content: "\e62a";
   font-size: 22px;
   color:#d4237a
-}
-
-.icon-qq:before {
-  content: "\e600";
-  font-size: 22px;
-  color: rgb(16,164,255);
-}
-
-.icon-wechat:before {
-  content: "\e601";
-  font-size: 22px;
-  color:#00bf03
 }
 
