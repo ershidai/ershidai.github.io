@@ -265,9 +265,6 @@ canvas:not(#ribbon-canvas),
 .scroll-down-effects {
   animation: scroll-down-effect 1.5s infinite;
 }
-.avatar-img {
-  animation: avatar_turn_around 2s linear infinite;
-}
 .reward-main {
   animation: donate_effcet 0.3s 0.1s ease both;
 }
