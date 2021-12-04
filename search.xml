@@ -4,6 +4,63 @@
   
     
     <entry>
+      <title>天地龙鳞lrc</title>
+      <link href="/article/3a6f9f4c.html"/>
+      <url>/article/3a6f9f4c.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="天地龙鳞-lrc"><a href="#天地龙鳞-lrc" class="headerlink" title="天地龙鳞 lrc"></a>天地龙鳞 lrc</h2><p>[ar:王力宏]<br>[ti:天地龙鳞]<br>[by:p_pttzhang]<br>[00:00.0]天地龙鳞 (《紫禁城》大型纪录片主题歌) - 王力宏<br>[00:00.567]词：方文山<br>[00:00.675]曲：王力宏<br>[00:00.783]编曲：唐达<br>[00:00.891]制作人：王力宏<br>[00:01.53]录音：王力宏<br>[00:01.188]混音：Mick Guzauski<br>[00:01.296]录音室：西东音乐 北京<br>[00:01.539]混音室：宏声音乐 台北<br>[00:01.782]特别鸣谢：西东音乐（王力宏工作室）<br>[00:18.833]这江山我起笔 民族血脉又几万里<br>[00:26.451]几世纪六百年里<br>[00:30.269]龙的传人历经风雨<br>[00:33.878]这京畿中轴地 一如君子气节不移<br>[00:41.484]九龙壁瓦上琉璃<br>[00:45.140]历史从这衰落又崛起<br>[00:48.969]这龙鳞却曾经 铿锵落地犹如碎冰<br>[00:56.433]一片鳞一寸心 故事飘摇我不忍听<br>[01:03.967]人守礼心守静 悠扬古琴弹君子心<br>[01:11.382]我清醒等回音 盘旋泱泱华夏文明<br>[01:20.917]敬过去我落笔 东方辽阔的黄土地<br>[01:28.276]山水里泼墨抹去<br>[01:31.950]只见嶙峋华夏骨气<br>[01:35.793]紫禁城神武门<br>[01:39.587]多少沧桑铸造中华魂<br>[01:43.305]我继承文化深耕<br>[01:47.8]突破变局去扭转乾坤<br>[01:52.698]这龙鳞却曾经 铿锵落地犹如碎冰<br>[02:00.129]一片鳞一寸心 以小成其大我坚信<br>[02:07.694]将民族的命运 昂首抬起再次复兴<br>[02:15.112]游天地寻龙鳞 龙的血脉蔚然成林<br>[02:37.714]这龙鳞却曾经 铿锵落地犹如碎冰<br>[02:45.188]一片鳞一寸心 故事飘摇我不忍听<br>[02:52.661]将民族的命运 昂首抬起再次复兴<br>[03:00.136]游天地寻龙鳞 龙的血脉蔚然成林</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> songer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker笔记</title>
+      <link href="/article/4417b09c.html"/>
+      <url>/article/4417b09c.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="docker学习笔记"><a href="#docker学习笔记" class="headerlink" title="docker学习笔记"></a>docker学习笔记</h1><h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><ul><li>参照[官方文档](<a href="https://docs.docker.com/engine/install/">Install Docker Engine | Docker Documentation</a>)部署</li></ul><h2 id="Docker-的用途"><a href="#Docker-的用途" class="headerlink" title="Docker 的用途"></a>Docker 的用途</h2><ol><li><p>一次编译，多次执行</p></li><li><p>提供弹性云服务，随开随关</p></li><li><p>组建微服务，一台机器跑多个服务</p><h2 id="Docker-命令"><a href="#Docker-命令" class="headerlink" title="Docker 命令"></a>Docker 命令</h2><p>需要注意的是，docker需要用户具有sudo 权限，为了避免麻烦，可以加入docker用户组</p></li></ol><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">groupadd</span> docker<span class="token function">sudo</span> <span class="token function">usermod</span> -aG docker <span class="token environment constant">$USER</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>  验证docker安装成功 可以 docker version</p><h3 id="docker-imge-文件"><a href="#docker-imge-文件" class="headerlink" title="docker imge 文件"></a>docker imge 文件</h3><p>image是二进制文件，docker把程序和依赖打包为镜像，之后生成Docker 容器，image 文件是容器的模板</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker <span class="token function">env</span> <span class="token comment"># 查看docker的环境配置</span>docker image <span class="token function">ls</span> <span class="token comment"># 列出所有 image 文件，可简写为 docker images</span>docker pull centos  <span class="token comment"># 获取 centos 镜像</span>docker image <span class="token function">rm</span> <span class="token punctuation">[</span>imageName<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>而image 的pull 都是从doker hub上获取的，用户可自行上传，同github</p><h3 id="docker-container-文件"><a href="#docker-container-文件" class="headerlink" title="docker container 文件"></a>docker container 文件</h3><p>container 容器，镜像的第二阶段，大部分的操作是在容器上</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker container <span class="token function">ls</span>docker container <span class="token function">ls</span> --all <span class="token comment">#包括终止运行的容器</span>docker container run -it centos:latest /bin/bash <span class="token comment"># 启动这个容器的基本命令</span><span class="token comment"># -it 参数是让命令行运行，/bin/bash 是指定shell</span><span class="token comment"># 可加 -d 参数 处于后台运行</span>docker container <span class="token function">rm</span> <span class="token punctuation">[</span>containerID<span class="token punctuation">]</span>docker container <span class="token function">kill</span> <span class="token punctuation">[</span>containerID<span class="token punctuation">]</span> docker <span class="token function">ps</span> -a <span class="token comment"># 查看运行容器</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><p>Dockerfile 类比 shell脚本，是制作docker容器的脚本，在项目的根目录touch .dockerignore ,里面可以添加你不想打包到 image 中的文件</p><pre class="line-numbers language-nginx" data-language="nginx"><code class="language-nginx">.gitnode_modulesnpm-debug.log<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>touch Dockerfile</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">FROM node:8.4  <span class="token comment">#指定image</span>COPY <span class="token builtin class-name">.</span> ./app  <span class="token comment">#拷贝项目到app路径</span>WORKDIR /appRUN <span class="token function">npm</span> <span class="token function">install</span> --registry<span class="token operator">=</span>https://registry.npm.taobao.org <span class="token comment">#安装依赖</span>EXPOSE <span class="token number">3000</span> <span class="token comment">#容器端口</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>创建 image file</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker image build -t name <span class="token builtin class-name">.</span>   <span class="token comment">#-t指定name . 为Dockfile路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>image 建好后，可以生成容器, </p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker container run -p <span class="token number">8000</span>:3000 -it name /bin/bash<span class="token comment"># -p 3000端口映射到本地8000端口</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="发布-image-文件"><a href="#发布-image-文件" class="headerlink" title="发布 image 文件"></a>发布 image 文件</h3><p>可以在 docker 官网 <a href="hub.docker.com">注册</a> 一个账户发布你的 image</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker login docker image tag <span class="token punctuation">[</span>imagename<span class="token punctuation">]</span> <span class="token punctuation">[</span>username<span class="token punctuation">]</span>/<span class="token punctuation">[</span>repository<span class="token punctuation">]</span>:<span class="token punctuation">[</span>tag<span class="token punctuation">]</span><span class="token comment"># 为本地 image 标注用户名和版本</span>docker image push <span class="token punctuation">[</span>username<span class="token punctuation">]</span>/<span class="token punctuation">[</span>repository<span class="token punctuation">]</span>:<span class="token punctuation">[</span>tag<span class="token punctuation">]</span> <span class="token comment"># 推送</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="归纳"><a href="#归纳" class="headerlink" title="归纳"></a>归纳</h2><p>一个容器名为lihong的centos image</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment"># 启动，停止，重启容器：</span>docker start container_name/container_iddocker stop ~docker restart ~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>例子：用于flask开发的python 环境</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">docker run -it centos:latest /bin/bash在容器中，安装python3,git,flash等依赖包，exitdocker commit -m <span class="token string">"flask"</span> -a <span class="token string">'lihong'</span> container_id lihong/flask:v1docker push lihong/flask:v1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>golang笔记</title>
+      <link href="/article/1d6afd5.html"/>
+      <url>/article/1d6afd5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Golang"><a href="#Golang" class="headerlink" title="Golang"></a>Golang</h1><h2 id="25-个关键字"><a href="#25-个关键字" class="headerlink" title="25 个关键字"></a>25 个关键字</h2><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">break</span> <span class="token keyword">default</span> <span class="token keyword">func</span> <span class="token keyword">interface</span> <span class="token keyword">select</span><span class="token keyword">case</span> <span class="token keyword">defer</span> <span class="token keyword">go</span> <span class="token keyword">map</span> <span class="token keyword">struct</span> <span class="token keyword">chan</span> <span class="token keyword">else</span> <span class="token keyword">goto</span> <span class="token keyword">package</span> <span class="token keyword">switch</span><span class="token keyword">const</span> <span class="token keyword">fallthrough</span> <span class="token keyword">if</span> <span class="token keyword">range</span> <span class="token keyword">type</span> <span class="token keyword">continue</span> <span class="token keyword">for</span> <span class="token keyword">import</span> <span class="token keyword">return</span> <span class="token keyword">var</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="37个保留字"><a href="#37个保留字" class="headerlink" title="37个保留字"></a>37个保留字</h2><pre class="line-numbers language-go" data-language="go"><code class="language-go">Constants<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token boolean">false</span> <span class="token boolean">iota</span> <span class="token boolean">nil</span>Types<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token builtin">int8</span> <span class="token builtin">int16</span> <span class="token builtin">int32</span> <span class="token builtin">int64</span><span class="token builtin">uint</span> <span class="token builtin">uint8</span> <span class="token builtin">uint16</span> <span class="token builtin">uint32</span> <span class="token builtin">uint64</span> <span class="token builtin">uintptr</span><span class="token builtin">float32</span> <span class="token builtin">float64</span> <span class="token builtin">complex128</span> <span class="token builtin">complex64</span><span class="token builtin">bool</span> <span class="token builtin">byte</span> <span class="token builtin">rune</span> <span class="token builtin">string</span> <span class="token builtin">error</span>functions<span class="token punctuation">:</span> <span class="token builtin">make</span> <span class="token builtin">len</span> <span class="token builtin">cap</span> <span class="token builtin">new</span> <span class="token builtin">append</span> <span class="token builtin">copy</span> <span class="token builtin">close</span> <span class="token builtin">delete</span> <span class="token builtin">complex</span> <span class="token builtin">real</span> <span class="token builtin">imag</span> <span class="token builtin">panic</span> <span class="token builtin">recover</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">var</span> a <span class="token builtin">int</span><span class="token keyword">const</span> PI <span class="token number">3.1415</span><span class="token keyword">type</span> <span class="token keyword">func</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><ul><li>src ：源码文件 项目路径</li><li>bin：二进制编译文件</li><li>pkg：包文件</li></ul><h3 id="内置类型"><a href="#内置类型" class="headerlink" title="内置类型"></a>内置类型</h3><ol><li><p>值类型</p><p>bool,string,array,int,uint….</p></li><li><p>引用类型</p><p>slice –序列数组</p><p>map – 映射</p><p>chan – 管道，信道</p></li></ol><h3 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h3>   <pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token builtin">append</span>          <span class="token operator">--</span> 用来追加元素到数组、slice中<span class="token punctuation">,</span>返回修改后的数组、slice<span class="token builtin">close</span>           <span class="token operator">--</span> 主要用来关闭channel 用法：<span class="token keyword">chan</span><span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token builtin">delete</span>            <span class="token operator">--</span> 从<span class="token keyword">map</span>中删除key对应的value<span class="token builtin">panic</span>            <span class="token operator">--</span> 停止常规的goroutine  （<span class="token builtin">panic</span>和<span class="token builtin">recover</span>：用来做错误处理）<span class="token builtin">recover</span>         <span class="token operator">--</span> 允许程序定义goroutine的<span class="token builtin">panic</span>动作<span class="token builtin">real</span>            <span class="token operator">--</span> 返回<span class="token builtin">complex</span>的实部   （<span class="token builtin">complex</span>、<span class="token builtin">real</span> <span class="token builtin">imag</span>：用于创建和操作复数）<span class="token builtin">imag</span>            <span class="token operator">--</span> 返回<span class="token builtin">complex</span>的虚部<span class="token builtin">make</span>            <span class="token operator">--</span> 用来分配内存，返回Type本身<span class="token punctuation">(</span>只能应用于slice<span class="token punctuation">,</span> <span class="token keyword">map</span><span class="token punctuation">,</span> channel<span class="token punctuation">)</span><span class="token builtin">new</span>                <span class="token operator">--</span> 用来分配内存，主要用来分配值类型，比如<span class="token builtin">int</span>、<span class="token keyword">struct</span>。返回指向Type的指针<span class="token builtin">cap</span>                <span class="token operator">--</span> capacity是容量的意思，用于返回某个类型的最大容量（只能用于切片和 <span class="token keyword">map</span>）<span class="token builtin">copy</span>            <span class="token operator">--</span> 用于复制和连接slice，返回复制的数目<span class="token builtin">len</span>                <span class="token operator">--</span> 来求长度，比如<span class="token builtin">string</span>、array、slice、<span class="token keyword">map</span>、channel ，返回长度<span class="token builtin">print</span>、<span class="token builtin">println</span>     <span class="token operator">--</span> 底层打印函数，在部署环境中建议使用 fmt 包<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="内置接口error"><a href="#内置接口error" class="headerlink" title="内置接口error"></a>内置接口error</h3><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">type</span> <span class="token builtin">error</span> <span class="token keyword">interface</span> <span class="token punctuation">&#123;</span> <span class="token comment">//只要实现了Error()函数，返回值为String的都实现了err接口</span>          <span class="token function">Error</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    String  <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="init函数与main的异同"><a href="#init函数与main的异同" class="headerlink" title="init函数与main的异同"></a>init函数与main的异同</h3><pre class="line-numbers language-go" data-language="go"><code class="language-go">相同点：    两个函数在定义时不能有任何的参数和返回值，且Go程序自动调用。不同点：    init可以应用于任意包中，且可以重复定义多个。    main函数只能用于main包中，且只能定义一个。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="go的命令"><a href="#go的命令" class="headerlink" title="go的命令"></a>go的命令</h2><p>  go env用于打印Go语言的环境信息。</p><p>go run命令可以编译并运行命令源码文件。</p><p>go get可以根据要求和实际情况从互联网上下载或更新指定的代码包及其依赖包，并对它们进行编译和安装。</p><p>go build命令用于编译我们指定的源码文件或代码包以及它们的依赖包。</p><p>go install用于编译并安装指定的代码包及它们的依赖包。</p><p>go clean命令会删除掉执行其它命令时产生的一些文件和目录。</p><p>go doc命令可以打印附于Go语言程序实体上的文档。我们可以通过把程序实体的标识符作为该命令的参数来达到查看其文档的目的。</p><p>go test命令用于对Go语言编写的程序进行测试。</p><p>go list命令的作用是列出指定的代码包的信息。</p><p>go fix会把指定代码包的所有Go语言源码文件中的旧版本代码修正为新版本的代码。</p><p>go vet是一个用于检查Go语言源码中静态错误的简单工具。</p><p>go tool pprof命令来交互式的访问概要文件的内容。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> coding </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ranger的使用</title>
       <link href="/article/ce6bd9d5.html"/>
       <url>/article/ce6bd9d5.html</url>
@@ -14,7 +71,7 @@
       
         <tags>
             
-            <tag> ranger </tag>
+            <tag> linux </tag>
             
         </tags>
       
@@ -30,6 +87,12 @@
         <content type="html"><![CDATA[<h1 id="pip-下载速度"><a href="#pip-下载速度" class="headerlink" title="pip 下载速度"></a>pip 下载速度</h1><p>添加豆瓣源可提高pip下载速率<br>pip 豆瓣源地址： -i  <a href="https://pypi.doubanio.com/simple/">https://pypi.doubanio.com/simple/</a>  –trusted-host pypi.doubanio.com  目标名<br>例：pip install  -i  <a href="https://pypi.doubanio.com/simple/">https://pypi.doubanio.com/simple/</a>  –trusted-host pypi.doubanio.com Django</p><h1 id="Python中的基本method"><a href="#Python中的基本method" class="headerlink" title="Python中的基本method"></a>Python中的基本method</h1><p>字符串(str)方法：    </p><ul><li>count() 返回个数</li><li>find() 返回这个字符所在索引</li><li>split() 分割字符 #这个可以用来字符串转列表</li><li>splitline() 以换行符分割</li><li>join() 与split()对立 连接字符，#’|’.join([‘1’,’2’,’3’])</li><li>strip() 删除两边空格</li><li>Istrip() 删除左边空格</li><li>rstrip() 删除右边空格 用的不多 更多用替换 replace(‘’,’’)</li><li>replace(‘old’,’new’) 替换所有指定字符</li><li>startswith() 是否以参数开头 返回布尔值</li><li>endswith() 是否以参数结尾 </li><li>isdigit() 是否全都是数字构成 返回布尔值</li><li>字符串倒序：str1 = ‘ ‘ R=str1[::-1] print(R)</li></ul><h1 id="printf风格"><a href="#printf风格" class="headerlink" title="printf风格"></a>printf风格</h1><p> %s 占位符  %d 整数占位 %f 浮点占位<br>print(‘I love you,%s,you are my %s’%(name,shabi))</p><h1 id="f-string-格式化"><a href="#f-string-格式化" class="headerlink" title="f-string 格式化"></a>f-string 格式化</h1><p>print(f’I love you,{name},you are my {shabi}’)</p><ol><li>指定宽度，小数点</li></ol><ul><li>{name:&lt;8} 占8个字符并左对齐</li><li>{shabi:&lt;8.1f} .1f表示保留一位小数</li><li>print(r’’) r表示不需转义字符</li></ul><h1 id="列表-list-方法："><a href="#列表-list-方法：" class="headerlink" title="列表(list)方法："></a>列表(list)方法：</h1><ul><li>.append() 在后面添加元素 返回None</li><li>.insert(索引，内容) 插入元素 返回None</li><li>.pop(索引) 删除元素 返回值 是 提取出来的元素</li><li>.remove(值) 按值删除，最多只删除一个 返回None</li><li>.reverse()  颠倒顺序 返回None</li><li>.index(值)  返回索引</li><li>.sort() 排序 返回None</li></ul><h1 id="字典-dict-方法："><a href="#字典-dict-方法：" class="headerlink" title="字典(dict)方法："></a>字典(dict)方法：</h1><p>遍历字典 .items() 将字典存在一个列表中，是个列表</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> account<span class="token punctuation">,</span>level <span class="token keyword">in</span> members<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'account:</span><span class="token interpolation"><span class="token punctuation">&#123;</span>account<span class="token punctuation">&#125;</span></span><span class="token string">,level:</span><span class="token interpolation"><span class="token punctuation">&#123;</span>level<span class="token punctuation">&#125;</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>members.keys() 返回所有key值在列表里</p><p>members.values() 返回所有values值在列表里</p><p>清空字典所有元素：.clear()</p><p>合并字典：.update(another) #another会覆盖掉原来的字典</p><h1 id="转换method"><a href="#转换method" class="headerlink" title="转换method"></a>转换method</h1><p>字符串转字典,列表:eval()  #eval()可以去掉外层的” “</p><p>列表转字典:dict()</p><p>其他转字符串:str()</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> coding </tag>
+            
+        </tags>
       
     </entry>
     
@@ -56,6 +119,12 @@
         <content type="html"><![CDATA[<h1 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h1><ul><li>i 进入插入模式</li><li>a 进入添加模式 即在当前光标下一个位置插入字符</li><li>o 在当前行下一行插入字符</li><li>O 在当前行上一行插入字符</li><li>x 删除当前光标下的字符</li><li>I 在行首进入插入模式</li><li>A 在行尾进入插入模式</li></ul><h1 id="normal-模式"><a href="#normal-模式" class="headerlink" title="normal 模式"></a>normal 模式</h1><ul><li>hjkl 左下上右</li></ul><h1 id="指令-方向-动作"><a href="#指令-方向-动作" class="headerlink" title="指令+方向+动作"></a>指令+方向+动作</h1><ul><li>d    | 数量加方向 | 向那个方向删除数量个字符</li><li>dd    剪切整行</li><li>w    向下移动一个词word</li><li>b    向上移动一个词back</li><li>ciw    change in word    删除一个word并进入插入模式#c会进入插入而d不会</li><li>ci”    删掉””里的字符</li><li>f    find </li><li>p    粘贴</li><li>y    复制</li><li>G    移到最后 gg 移到第一行首</li></ul><h1 id="可视化模式"><a href="#可视化模式" class="headerlink" title="可视化模式"></a>可视化模式</h1><ul><li>v    进入该模式</li><li>V    进入该模式的行</li><li>ctr+shift+v    进入该模式的块</li></ul><p>选中后,按:normal 可执行普通模式命令</p><h1 id="番外之cmd编码"><a href="#番外之cmd编码" class="headerlink" title="番外之cmd编码"></a>番外之cmd编码</h1><ul><li>chcp #查看当前cmd的编码格式</li><li>chcp 65001   #换成utf-8代码页</li><li>chcp 936       #换成默认的gbk</li><li>chcp 437       #美国英语</li></ul>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
       
     </entry>
     
@@ -85,7 +154,7 @@
       
         <tags>
             
-            <tag> archlinux </tag>
+            <tag> linux </tag>
             
         </tags>
       
@@ -104,7 +173,7 @@
       
         <tags>
             
-            <tag> 教程,白嫖 </tag>
+            <tag> getfree </tag>
             
         </tags>
       
@@ -121,6 +190,12 @@
       
       
       
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -136,7 +211,7 @@
       
         <tags>
             
-            <tag> 数据库笔记,学习 </tag>
+            <tag> datadb </tag>
             
         </tags>
       
@@ -155,7 +230,7 @@
       
         <tags>
             
-            <tag> python学习 </tag>
+            <tag> coding </tag>
             
         </tags>
       
